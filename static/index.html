@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardware Sourcing & Specs Agent</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+
+<body class="dark-theme">
+    <div class="background-mesh"></div>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon-primary">
+                    <rect x="4" y="4" width="16" height="16" rx="2" />
+                    <rect x="9" y="9" width="6" height="6" />
+                    <line x1="9" y1="1" x2="9" y2="4" />
+                    <line x1="15" y1="1" x2="15" y2="4" />
+                    <line x1="9" y1="20" x2="9" y2="23" />
+                    <line x1="15" y1="20" x2="15" y2="23" />
+                    <line x1="20" y1="9" x2="23" y2="9" />
+                    <line x1="20" y1="15" x2="23" y2="15" />
+                    <line x1="1" y1="9" x2="4" y2="9" />
+                    <line x1="1" y1="15" x2="4" y2="15" />
+                </svg>
+                <span>Hardware Sourcing Agent</span>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="active">Move UP</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="hero">
+            <h1>Intelligent Component Analysis</h1>
+            <p>Autonomous research, spec extraction, and global pricing validation.</p>
+        </header>
+
+        <section class="search-section">
+            <div class="search-container glass-morphism">
+                <input type="text" id="component-query" placeholder="Enter component name (e.g., ESP32-WROOM-32)..."
+                    autocomplete="off">
+                <button id="search-btn">
+                    <span>Search</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="m21 21-4.3-4.3" />
+                    </svg>
+                </button>
+            </div>
+            <div class="quick-select">
+                <span>Quick Select:</span>
+                <div class="chips" id="chips-container">
+                    <button class="chip" data-val="ESP32-WROOM-32">ESP32-WROOM-32</button>
+                    <button class="chip" data-val="NE555">NE555</button>
+                    <button class="chip" data-val="STM32F103C8T6">STM32F103C8T6</button>
+                    <button class="chip" data-val="ATmega328P">ATmega328P</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="research-progress" class="hidden">
+            <div class="terminal-container glass-morphism">
+                <div class="terminal-header">
+                    <div class="buttons">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <div class="terminal-title">Agent reasoning trace</div>
+                </div>
+                <div id="terminal-output" class="terminal-body">
+                    <!-- Progress steps will appear here -->
+                </div>
+            </div>
+        </section>
+
+        <div id="results-display" class="hidden">
+            <!-- Tiered 3D Layout will be injected here -->
+            <div class="tiered-dashboard">
+                <div id="box-header" class="glass-box"></div>
+
+                <div class="visualizer-row">
+                    <div id="box-3d-model" class="glass-box" style="display: flex; flex-direction: column;">
+                        <div class="box-title">Engineering 360° Model & Data</div>
+                        <div id="canvas-container" style="flex: none;"></div>
+                        <div id="table-container-wrapper" style="flex: 1; overflow-y: hidden;"></div>
+                    </div>
+                    <div id="box-pinout" class="glass-box" style="display: flex; flex-direction: column;">
+                        <div class="box-title">Pin Configuration (Interactive Zoom)</div>
+                        <div id="pin-visual-wrapper" style="flex: 1;"></div>
+                    </div>
+                </div>
+
+                <div id="box-pricing" class="glass-box">
+                    <div class="box-title">Global Sourcing & Pricing Validation</div>
+                    <div id="pricing-table-wrapper"></div>
+                </div>
+
+                <div id="box-youtube" class="glass-box" style="display: none; margin-top: 2rem;">
+                    <div class="box-title" style="margin-bottom: 1rem;">Video Walkthroughs & Learning</div>
+                    <div id="youtube-tutorials-wrapper"
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="container">
+        <p>&copy; 2026 Advanced Agentic Coding. Built for high-performance engineering.</p>
+    </footer>
+
+    <!-- Tooltip for interactive 3D pins -->
+    <div id="pin-tooltip"></div>
+
+    <script src="/static/script.js"></script>
+</body>
+
+</html>

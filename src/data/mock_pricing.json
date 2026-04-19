@@ -1,0 +1,762 @@
+{
+  "ESP32-WROOM-32": [
+    {
+      "distributor": "Mouser Electronics",
+      "moq": 1,
+      "stock_quantity": 14523,
+      "url": "https://www.mouser.com/c/?q=ESP32-WROOM-32",
+      "country": "USA",
+      "currency": "USD",
+      "unit_price": 2.8
+    },
+    {
+      "distributor": "DigiKey",
+      "moq": 1,
+      "stock_quantity": 8920,
+      "url": "https://www.digikey.com/en/products/detail/espressif-systems/ESP32-WROOM-32",
+      "country": "Germany",
+      "currency": "EUR",
+      "unit_price": 2.85
+    },
+    {
+      "distributor": "Newark / Farnell",
+      "moq": 1,
+      "stock_quantity": 3210,
+      "url": "https://www.newark.com/espressif/esp32-wroom-32",
+      "country": "UK",
+      "currency": "GBP",
+      "unit_price": 2.73
+    },
+    {
+      "distributor": "Robu.in",
+      "country": "India",
+      "currency": "INR",
+      "unit_price": 259.0,
+      "moq": 1,
+      "stock_quantity": 550,
+      "url": "https://robu.in/?s=ESP32-WROOM-32&post_type=product"
+    }
+  ],
+  "STM32F103C8T6": [
+    {
+      "distributor": "Mouser Electronics",
+      "moq": 1,
+      "stock_quantity": 22100,
+      "url": "https://www.mouser.com/c/?q=STM32F103C8T6",
+      "country": "USA",
+      "currency": "USD",
+      "unit_price": 3.5
+    },
+    {
+      "distributor": "DigiKey",
+      "moq": 1,
+      "stock_quantity": 15600,
+      "url": "https://www.digikey.com/en/products/detail/stmicroelectronics/STM32F103C8T6",
+      "country": "Germany",
+      "currency": "EUR",
+      "unit_price": 3.54
+    },
+    {
+      "distributor": "Newark / Farnell",
+      "moq": 1,
+      "stock_quantity": 5430,
+      "url": "https://www.newark.com/stmicroelectronics/stm32f103c8t6",
+      "country": "UK",
+      "currency": "GBP",
+      "unit_price": 3.32
+    },
+    {
+      "distributor": "Robu.in",
+      "country": "India",
+      "currency": "INR",
+      "unit_price": 323.0,
+      "moq": 1,
+      "stock_quantity": 550,
+      "url": "https://robu.in/?s=STM32F103C8T6&post_type=product"
+    }
+  ],
+  "ATmega328P": [
+    {
+      "distributor": "Mouser Electronics",
+      "moq": 1,
+      "stock_quantity": 31200,
+      "url": "https://www.mouser.com/c/?q=ATmega328P",
+      "country": "USA",
+      "currency": "USD",
+      "unit_price": 2.15
+    },
+    {
+      "distributor": "DigiKey",
+      "moq": 1,
+      "stock_quantity": 19800,
+      "url": "https://www.digikey.com/en/products/detail/microchip/ATmega328P",
+      "country": "Germany",
+      "currency": "EUR",
+      "unit_price": 2.21
+    },
+    {
+      "distributor": "Newark / Farnell",
+      "moq": 5,
+      "stock_quantity": 7600,
+      "url": "https://www.newark.com/microchip/atmega328p",
+      "country": "UK",
+      "currency": "GBP",
+      "unit_price": 2.17
+    },
+    {
+      "distributor": "Robu.in",
+      "country": "India",
+      "currency": "INR",
+      "unit_price": 199.0,
+      "moq": 1,
+      "stock_quantity": 550,
+      "url": "https://robu.in/?s=ATmega328P&post_type=product"
+    }
+  ],
+  "RP2040": [
+    {
+      "distributor": "Mouser Electronics",
+      "moq": 1,
+      "stock_quantity": 45000,
+      "url": "https://www.mouser.com/c/?q=RP2040",
+      "country": "USA",
+      "currency": "USD",
+      "unit_price": 0.7
+    },
+    {
+      "distributor": "DigiKey",
+      "moq": 1,
+      "stock_quantity": 38000,
+      "url": "https://www.digikey.com/en/products/detail/raspberry-pi/RP2040",
+      "country": "Germany",
+      "currency": "EUR",
+      "unit_price": 0.74
+    },
+    {
+      "distributor": "Newark / Farnell",
+      "moq": 10,
+      "stock_quantity": 12000,
+      "url": "https://www.newark.com/raspberry-pi/rp2040",
+      "country": "UK",
+      "currency": "GBP",
+      "unit_price": 0.75
+    },
+    {
+      "distributor": "Robu.in",
+      "country": "India",
+      "currency": "INR",
+      "unit_price": 65.0,
+      "moq": 1,
+      "stock_quantity": 550,
+      "url": "https://robu.in/?s=RP2040&post_type=product"
+    }
+  ],
+  "NE555": [
+    {
+      "distributor": "Mouser Electronics",
+      "moq": 1,
+      "stock_quantity": 125000,
+      "url": "https://www.mouser.com/c/?q=NE555",
+      "country": "USA",
+      "currency": "USD",
+      "unit_price": 0.38
+    },
+    {
+      "distributor": "DigiKey",
+      "moq": 1,
+      "stock_quantity": 98000,
+      "url": "https://www.digikey.com/en/products/detail/texas-instruments/NE555P",
+      "country": "Germany",
+      "currency": "EUR",
+      "unit_price": 0.39
+    },
+    {
+      "distributor": "Newark / Farnell",
+      "moq": 10,
+      "stock_quantity": 67000,
+      "url": "https://www.newark.com/texas-instruments/ne555p",
+      "country": "UK",
+      "currency": "GBP",
+      "unit_price": 0.43
+    },
+    {
+      "distributor": "Robu.in",
+      "country": "India",
+      "currency": "INR",
+      "unit_price": 35.0,
+      "moq": 1,
+      "stock_quantity": 550,
+      "url": "https://robu.in/?s=NE555&post_type=product"
+    }
+  ],
+  "LM7805": [
+    {
+      "distributor": "Mouser Electronics",
+      "moq": 1,
+      "stock_quantity": 89000,
+      "url": "https://www.mouser.com/c/?q=LM7805",
+      "country": "USA",
+      "currency": "USD",
+      "unit_price": 0.45
+    },
+    {
+      "distributor": "DigiKey",
+      "moq": 1,
+      "stock_quantity": 72000,
+      "url": "https://www.digikey.com/en/products/detail/texas-instruments/LM7805CT",
+      "country": "Germany",
+      "currency": "EUR",
+      "unit_price": 0.48
+    },
+    {
+      "distributor": "Newark / Farnell",
+      "moq": 5,
+      "stock_quantity": 34000,
+      "url": "https://www.newark.com/texas-instruments/lm7805ct",
+      "country": "UK",
+      "currency": "GBP",
+      "unit_price": 0.47
+    },
+    {
+      "distributor": "Robu.in",
+      "country": "India",
+      "currency": "INR",
+      "unit_price": 42.0,
+      "moq": 1,
+      "stock_quantity": 550,
+      "url": "https://robu.in/?s=LM7805&post_type=product"
+    }
+  ],
+  "LM317": [
+    {
+      "distributor": "Mouser Electronics",
+      "moq": 1,
+      "stock_quantity": 56000,
+      "url": "https://www.mouser.com/c/?q=LM317",
+      "country": "USA",
+      "currency": "USD",
+      "unit_price": 0.55
+    },
+    {
+      "distributor": "DigiKey",
+      "moq": 1,
+      "stock_quantity": 43000,
+      "url": "https://www.digikey.com/en/products/detail/texas-instruments/LM317T",
+      "country": "Germany",
+      "currency": "EUR",
+      "unit_price": 0.57
+    },
+    {
+      "distributor": "Newark / Farnell",
+      "moq": 5,
+      "stock_quantity": 21000,
+      "url": "https://www.newark.com/texas-instruments/lm317t",
+      "country": "UK",
+      "currency": "GBP",
+      "unit_price": 0.57
+    },
+    {
+      "distributor": "Robu.in",
+      "country": "India",
+      "currency": "INR",
+      "unit_price": 51.0,
+      "moq": 1,
+      "stock_quantity": 550,
+      "url": "https://robu.in/?s=LM317&post_type=product"
+    }
+  ],
+  "MAX232": [
+    {
+      "distributor": "Mouser Electronics",
+      "moq": 1,
+      "stock_quantity": 18500,
+      "url": "https://www.mouser.com/c/?q=MAX232",
+      "country": "USA",
+      "currency": "USD",
+      "unit_price": 1.85
+    },
+    {
+      "distributor": "DigiKey",
+      "moq": 1,
+      "stock_quantity": 12300,
+      "url": "https://www.digikey.com/en/products/detail/texas-instruments/MAX232",
+      "country": "Germany",
+      "currency": "EUR",
+      "unit_price": 1.93
+    },
+    {
+      "distributor": "Newark / Farnell",
+      "moq": 1,
+      "stock_quantity": 6700,
+      "url": "https://www.newark.com/texas-instruments/max232",
+      "country": "UK",
+      "currency": "GBP",
+      "unit_price": 1.86
+    },
+    {
+      "distributor": "Robu.in",
+      "country": "India",
+      "currency": "INR",
+      "unit_price": 171.0,
+      "moq": 1,
+      "stock_quantity": 550,
+      "url": "https://robu.in/?s=MAX232&post_type=product"
+    }
+  ],
+  "ADS1115": [
+    {
+      "distributor": "Mouser Electronics",
+      "moq": 1,
+      "stock_quantity": 9800,
+      "url": "https://www.mouser.com/c/?q=ADS1115",
+      "country": "USA",
+      "currency": "USD",
+      "unit_price": 5.2
+    },
+    {
+      "distributor": "DigiKey",
+      "moq": 1,
+      "stock_quantity": 7200,
+      "url": "https://www.digikey.com/en/products/detail/texas-instruments/ADS1115",
+      "country": "Germany",
+      "currency": "EUR",
+      "unit_price": 5.2
+    },
+    {
+      "distributor": "Newark / Farnell",
+      "moq": 1,
+      "stock_quantity": 3100,
+      "url": "https://www.newark.com/texas-instruments/ads1115",
+      "country": "UK",
+      "currency": "GBP",
+      "unit_price": 4.82
+    },
+    {
+      "distributor": "Robu.in",
+      "country": "India",
+      "currency": "INR",
+      "unit_price": 480.0,
+      "moq": 1,
+      "stock_quantity": 550,
+      "url": "https://robu.in/?s=ADS1115&post_type=product"
+    }
+  ],
+  "DHT22": [
+    {
+      "distributor": "Mouser Electronics",
+      "moq": 1,
+      "stock_quantity": 11200,
+      "url": "https://www.mouser.com/c/?q=DHT22",
+      "country": "USA",
+      "currency": "USD",
+      "unit_price": 4.5
+    },
+    {
+      "distributor": "DigiKey",
+      "moq": 1,
+      "stock_quantity": 8600,
+      "url": "https://www.digikey.com/en/products/detail/aosong/DHT22",
+      "country": "Germany",
+      "currency": "EUR",
+      "unit_price": 4.55
+    },
+    {
+      "distributor": "Newark / Farnell",
+      "moq": 1,
+      "stock_quantity": 4200,
+      "url": "https://www.newark.com/aosong/dht22",
+      "country": "UK",
+      "currency": "GBP",
+      "unit_price": 4.19
+    },
+    {
+      "distributor": "Robu.in",
+      "country": "India",
+      "currency": "INR",
+      "unit_price": 416.0,
+      "moq": 1,
+      "stock_quantity": 550,
+      "url": "https://robu.in/?s=DHT22&post_type=product"
+    }
+  ],
+  "BMP280": [
+    {
+      "distributor": "Mouser Electronics",
+      "moq": 1,
+      "stock_quantity": 27800,
+      "url": "https://www.mouser.com/c/?q=BMP280",
+      "country": "USA",
+      "currency": "USD",
+      "unit_price": 1.6
+    },
+    {
+      "distributor": "DigiKey",
+      "moq": 1,
+      "stock_quantity": 19500,
+      "url": "https://www.digikey.com/en/products/detail/bosch/BMP280",
+      "country": "Germany",
+      "currency": "EUR",
+      "unit_price": 1.7
+    },
+    {
+      "distributor": "Newark / Farnell",
+      "moq": 5,
+      "stock_quantity": 8300,
+      "url": "https://www.newark.com/bosch/bmp280",
+      "country": "UK",
+      "currency": "GBP",
+      "unit_price": 1.66
+    },
+    {
+      "distributor": "Robu.in",
+      "country": "India",
+      "currency": "INR",
+      "unit_price": 148.0,
+      "moq": 1,
+      "stock_quantity": 550,
+      "url": "https://robu.in/?s=BMP280&post_type=product"
+    }
+  ],
+  "MPU6050": [
+    {
+      "distributor": "Mouser Electronics",
+      "moq": 1,
+      "stock_quantity": 15400,
+      "url": "https://www.mouser.com/c/?q=MPU6050",
+      "country": "USA",
+      "currency": "USD",
+      "unit_price": 3.2
+    },
+    {
+      "distributor": "DigiKey",
+      "moq": 1,
+      "stock_quantity": 11200,
+      "url": "https://www.digikey.com/en/products/detail/tdk-invensense/MPU6050",
+      "country": "Germany",
+      "currency": "EUR",
+      "unit_price": 3.27
+    },
+    {
+      "distributor": "Newark / Farnell",
+      "moq": 1,
+      "stock_quantity": 5600,
+      "url": "https://www.newark.com/tdk-invensense/mpu6050",
+      "country": "UK",
+      "currency": "GBP",
+      "unit_price": 3.08
+    },
+    {
+      "distributor": "Robu.in",
+      "country": "India",
+      "currency": "INR",
+      "unit_price": 296.0,
+      "moq": 1,
+      "stock_quantity": 550,
+      "url": "https://robu.in/?s=MPU6050&post_type=product"
+    }
+  ],
+  "HC-SR04": [
+    {
+      "distributor": "Mouser Electronics",
+      "moq": 1,
+      "stock_quantity": 32000,
+      "url": "https://www.mouser.com/c/?q=HC-SR04",
+      "country": "USA",
+      "currency": "USD",
+      "unit_price": 2.4
+    },
+    {
+      "distributor": "DigiKey",
+      "moq": 1,
+      "stock_quantity": 25000,
+      "url": "https://www.digikey.com/en/products/detail/HC-SR04",
+      "country": "Germany",
+      "currency": "EUR",
+      "unit_price": 2.58
+    },
+    {
+      "distributor": "Newark / Farnell",
+      "moq": 1,
+      "stock_quantity": 11000,
+      "url": "https://www.newark.com/hc-sr04",
+      "country": "UK",
+      "currency": "GBP",
+      "unit_price": 2.45
+    },
+    {
+      "distributor": "Robu.in",
+      "country": "India",
+      "currency": "INR",
+      "unit_price": 222.0,
+      "moq": 1,
+      "stock_quantity": 550,
+      "url": "https://robu.in/?s=HC-SR04&post_type=product"
+    }
+  ],
+  "ESP8266": [
+    {
+      "distributor": "Mouser Electronics",
+      "moq": 1,
+      "stock_quantity": 35000,
+      "url": "https://www.mouser.com/c/?q=ESP8266",
+      "country": "USA",
+      "currency": "USD",
+      "unit_price": 1.9
+    },
+    {
+      "distributor": "DigiKey",
+      "moq": 1,
+      "stock_quantity": 28000,
+      "url": "https://www.digikey.com/en/products/detail/espressif-systems/ESP8266",
+      "country": "Germany",
+      "currency": "EUR",
+      "unit_price": 1.98
+    },
+    {
+      "distributor": "Newark / Farnell",
+      "moq": 1,
+      "stock_quantity": 15000,
+      "url": "https://www.newark.com/espressif/esp8266",
+      "country": "UK",
+      "currency": "GBP",
+      "unit_price": 1.98
+    },
+    {
+      "distributor": "Robu.in",
+      "country": "India",
+      "currency": "INR",
+      "unit_price": 176.0,
+      "moq": 1,
+      "stock_quantity": 550,
+      "url": "https://robu.in/?s=ESP8266&post_type=product"
+    }
+  ],
+  "STM32F407VGT6": [
+    {
+      "distributor": "Mouser Electronics",
+      "moq": 1,
+      "stock_quantity": 6200,
+      "url": "https://www.mouser.com/c/?q=STM32F407VGT6",
+      "country": "USA",
+      "currency": "USD",
+      "unit_price": 8.5
+    },
+    {
+      "distributor": "DigiKey",
+      "moq": 1,
+      "stock_quantity": 4800,
+      "url": "https://www.digikey.com/en/products/detail/stmicroelectronics/STM32F407VGT6",
+      "country": "Germany",
+      "currency": "EUR",
+      "unit_price": 8.46
+    },
+    {
+      "distributor": "Newark / Farnell",
+      "moq": 1,
+      "stock_quantity": 2100,
+      "url": "https://www.newark.com/stmicroelectronics/stm32f407vgt6",
+      "country": "UK",
+      "currency": "GBP",
+      "unit_price": 7.78
+    },
+    {
+      "distributor": "Robu.in",
+      "country": "India",
+      "currency": "INR",
+      "unit_price": 785.0,
+      "moq": 1,
+      "stock_quantity": 550,
+      "url": "https://robu.in/?s=STM32F407VGT6&post_type=product"
+    }
+  ],
+  "Arduino Nano": [
+    {
+      "distributor": "Mouser Electronics",
+      "moq": 1,
+      "stock_quantity": 8500,
+      "url": "https://www.mouser.com/c/?q=Arduino%20Nano",
+      "country": "USA",
+      "currency": "USD",
+      "unit_price": 12.5
+    },
+    {
+      "distributor": "DigiKey",
+      "moq": 1,
+      "stock_quantity": 6200,
+      "url": "https://www.digikey.com/en/products/detail/arduino/Nano",
+      "country": "Germany",
+      "currency": "EUR",
+      "unit_price": 12.7
+    },
+    {
+      "distributor": "Newark / Farnell",
+      "moq": 1,
+      "stock_quantity": 3400,
+      "url": "https://www.newark.com/arduino/nano",
+      "country": "UK",
+      "currency": "GBP",
+      "unit_price": 11.46
+    },
+    {
+      "distributor": "Robu.in",
+      "country": "India",
+      "currency": "INR",
+      "unit_price": 1155.0,
+      "moq": 1,
+      "stock_quantity": 550,
+      "url": "https://robu.in/?s=Arduino%20Nano&post_type=product"
+    }
+  ],
+  "LM358": [
+    {
+      "distributor": "Mouser Electronics",
+      "moq": 1,
+      "stock_quantity": 145000,
+      "url": "https://www.mouser.com/c/?q=LM358",
+      "country": "USA",
+      "currency": "USD",
+      "unit_price": 0.32
+    },
+    {
+      "distributor": "DigiKey",
+      "moq": 1,
+      "stock_quantity": 112000,
+      "url": "https://www.digikey.com/en/products/detail/texas-instruments/LM358",
+      "country": "Germany",
+      "currency": "EUR",
+      "unit_price": 0.35
+    },
+    {
+      "distributor": "Newark / Farnell",
+      "moq": 10,
+      "stock_quantity": 56000,
+      "url": "https://www.newark.com/texas-instruments/lm358",
+      "country": "UK",
+      "currency": "GBP",
+      "unit_price": 0.36
+    },
+    {
+      "distributor": "Robu.in",
+      "country": "India",
+      "currency": "INR",
+      "unit_price": 30.0,
+      "moq": 1,
+      "stock_quantity": 550,
+      "url": "https://robu.in/?s=LM358&post_type=product"
+    }
+  ],
+  "74HC595": [
+    {
+      "distributor": "Mouser Electronics",
+      "moq": 1,
+      "stock_quantity": 87000,
+      "url": "https://www.mouser.com/c/?q=74HC595",
+      "country": "USA",
+      "currency": "USD",
+      "unit_price": 0.42
+    },
+    {
+      "distributor": "DigiKey",
+      "moq": 1,
+      "stock_quantity": 65000,
+      "url": "https://www.digikey.com/en/products/detail/texas-instruments/SN74HC595N",
+      "country": "Germany",
+      "currency": "EUR",
+      "unit_price": 0.44
+    },
+    {
+      "distributor": "Newark / Farnell",
+      "moq": 5,
+      "stock_quantity": 32000,
+      "url": "https://www.newark.com/texas-instruments/sn74hc595n",
+      "country": "UK",
+      "currency": "GBP",
+      "unit_price": 0.43
+    },
+    {
+      "distributor": "Robu.in",
+      "country": "India",
+      "currency": "INR",
+      "unit_price": 39.0,
+      "moq": 1,
+      "stock_quantity": 550,
+      "url": "https://robu.in/?s=74HC595&post_type=product"
+    }
+  ],
+  "IRFZ44N": [
+    {
+      "distributor": "Mouser Electronics",
+      "moq": 1,
+      "stock_quantity": 42000,
+      "url": "https://www.mouser.com/c/?q=IRFZ44N",
+      "country": "USA",
+      "currency": "USD",
+      "unit_price": 0.95
+    },
+    {
+      "distributor": "DigiKey",
+      "moq": 1,
+      "stock_quantity": 35000,
+      "url": "https://www.digikey.com/en/products/detail/infineon/IRFZ44N",
+      "country": "Germany",
+      "currency": "EUR",
+      "unit_price": 1.01
+    },
+    {
+      "distributor": "Newark / Farnell",
+      "moq": 1,
+      "stock_quantity": 18000,
+      "url": "https://www.newark.com/infineon/irfz44n",
+      "country": "UK",
+      "currency": "GBP",
+      "unit_price": 0.99
+    },
+    {
+      "distributor": "Robu.in",
+      "country": "India",
+      "currency": "INR",
+      "unit_price": 88.0,
+      "moq": 1,
+      "stock_quantity": 550,
+      "url": "https://robu.in/?s=IRFZ44N&post_type=product"
+    }
+  ],
+  "L298N": [
+    {
+      "distributor": "Mouser Electronics",
+      "moq": 1,
+      "stock_quantity": 16500,
+      "url": "https://www.mouser.com/c/?q=L298N",
+      "country": "USA",
+      "currency": "USD",
+      "unit_price": 3.8
+    },
+    {
+      "distributor": "DigiKey",
+      "moq": 1,
+      "stock_quantity": 12200,
+      "url": "https://www.digikey.com/en/products/detail/stmicroelectronics/L298N",
+      "country": "Germany",
+      "currency": "EUR",
+      "unit_price": 3.91
+    },
+    {
+      "distributor": "Newark / Farnell",
+      "moq": 1,
+      "stock_quantity": 7800,
+      "url": "https://www.newark.com/stmicroelectronics/l298n",
+      "country": "UK",
+      "currency": "GBP",
+      "unit_price": 3.63
+    },
+    {
+      "distributor": "Robu.in",
+      "country": "India",
+      "currency": "INR",
+      "unit_price": 351.0,
+      "moq": 1,
+      "stock_quantity": 550,
+      "url": "https://robu.in/?s=L298N&post_type=product"
+    }
+  ]
+}

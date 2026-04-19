@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Environment variables
+.env
+.env.example
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Exports (keep plan docs)
+Implementation_Plan.html
+Walkthrough.html
+Implementation_Plan.docx
+Walkthrough.docx
+walkthrough.md
+Implementation_Plan.md
+Hardware_Agent_Presentation_Script.pdf
+Lumiq_Final_Submission_Script.pdf
+
+# Misc
+*.bak
