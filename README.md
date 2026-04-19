@@ -1,252 +1,191 @@
-# 🔧 Hardware Sourcing & Specs Agent
+# Hardware Sourcing and Specifications Agent
 
-> **An autonomous AI agent that researches electronic components** — finds datasheets, compares distributor pricing, validates stock availability, and returns a structured report. Built with LangGraph, Pydantic, and Streamlit.
-
-[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
-[![LangGraph](https://img.shields.io/badge/LangGraph-StateGraph-green.svg)](https://github.com/langchain-ai/langgraph)
-[![Pydantic v2](https://img.shields.io/badge/Pydantic-v2-red.svg)](https://docs.pydantic.dev/)
-[![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-ff4b4b.svg)](https://streamlit.io/)
+An autonomous AI agent designed to automate the research of electronic components. The system identifies manufacturer datasheets, extracts technical specifications, performs pricing comparisons across multiple distributors, validates stock availability, and provides a comprehensive structured report. Built using LangGraph, Pydantic, FastAPI, and Streamlit.
 
 ---
 
-## 🎯 Problem Statement
+## Overview
 
-Hardware engineers routinely spend **30–60 minutes per component** cross-referencing datasheets, comparing distributor prices, and verifying stock availability. This agent automates the entire workflow:
+Hardware engineering requires significant manual effort to cross-reference datasheets, compare distributor pricing, and verify stock availability. This agentic system automates this search-and-extraction workflow:
 
-**Input:** A component name (e.g., `ESP32-WROOM-32`)
-**Output:** A structured JSON report with manufacturer info, datasheet link, key pins, pricing comparison, and stock status.
-
----
-
-## ✨ Features
-
-- **4 Autonomous Tools**: Web search (Tavily), LLM-powered datasheet extraction, pricing lookup, stock validation
-- **Agentic Reasoning Loop**: LangGraph `StateGraph` with 6 nodes, conditional edges, and retry cycles
-- **Strict Data Validation**: Pydantic v2 models at every boundary
-- **Real-time Dashboard**: Streamlit UI with progress tracking, pricing charts, and pin tables
-- **Agent Reasoning Trace**: Full transparency — see every decision the agent makes
-- **20+ Component Database**: Mock pricing for popular components ensures reliable demos
-- **Retry & Error Handling**: Automatic retries with graceful degradation
-- **Caching**: In-memory TTL cache to avoid redundant API calls
+*   **Input**: A component part number or descriptive name (e.g., STM32F103C8T6).
+*   **Process**: Autonomous web research, multi-agent data extraction, and real-time distributor database queries.
+*   **Output**: A structured technical report including manufacturer specifications, pinout summaries, pricing trends, and stock status.
 
 ---
 
-## 🏗️ Architecture
+## Core Features
 
-The agent uses a custom **LangGraph StateGraph** (not `create_react_agent`) to demonstrate explicit control over the agentic reasoning loop:
+*   **Autonomous Agentic Workflow**: Implemented via LangGraph StateGraph, featuring structured reasoning, conditional transition logic, and automatic retry mechanisms.
+*   **Dual-LLM Cross-Validation**: Uses a multi-agent approach (e.g., Gemini 2.0 Flash as primary and Gemini 1.5 Flash as secondary) to verify extracted technical data for high reliability.
+*   **Real-time Intelligence**: Integration with Tavily Search API for targeted technical document retrieval and YouTube API for finding relevant hardware tutorials.
+*   **Distributor Analysis**: Automated lookup of unit prices, MOQ (Minimum Order Quantity), and stock quantities across major distributors.
+*   **Dual Interface Support**:
+    *   **Streamlit Dashboard**: A high-performance, interactive UI with real-time agent progress tracking and data visualization.
+    *   **FastAPI Backend**: A production-grade REST API with Server-Sent Events (SSE) for streaming agent thought processes.
+*   **Data Integrity**: Strict validation using Pydantic v2 models at every interface boundary.
 
+---
+
+## System Architecture
+
+The agent utilizes a custom LangGraph StateGraph (explicit state management) rather than a generic ReAct pattern to ensure deterministic control over the research phases.
+
+```mermaid
+graph TD
+    START --> Planner
+    Planner --> Searcher
+    Searcher --> Extractor
+    Extractor --> Pricing
+    Pricing --> Validator
+    Validator -- "Incomplete Data" --> IncrementRetry
+    IncrementRetry --> Searcher
+    Validator -- "Complete" --> Formatter
+    Validator -- "Error" --> ErrorHandler
+    Formatter --> END
+    ErrorHandler --> END
 ```
-START → Planner → Searcher → Extractor → Pricing → Validator → Formatter → END
-                     ↑                                    |
-                     |←────── retry (max 2) ──────────────|
-                                                          |
-                     Error Handler ←─── (exhausted) ──────|
-                          |
-                          ↓
-                         END
-```
 
-### Node Descriptions
+### Component Nodes
 
-| Node | Responsibility | Tools Used |
-|------|---------------|------------|
-| **Planner** | Analyzes query, creates research strategy | LLM reasoning |
-| **Searcher** | Executes web searches for datasheets & specs | Tavily Search |
-| **Extractor** | Extracts structured data from search results | LLM + Pydantic |
-| **Pricing** | Looks up distributor pricing | Mock API + Cache |
-| **Validator** | Checks stock availability, validates completeness | Aggregation logic |
-| **Formatter** | Compiles final structured report | Pydantic serialization |
+| Node | Responsibility | Integrated Tools |
+| :--- | :--- | :--- |
+| **Planner** | Analyzes the initial query and formulates a search strategy. | LLM Reasoning |
+| **Searcher** | Executes targeted web searches for datasheets, specs, and tutorials. | Tavily Search, YouTube |
+| **Extractor** | Parses raw search results into structured specifications. | Dual-LLM Validation |
+| **Pricing** | Retrieves unit pricing and availability data. | Distributor Inventory DB |
+| **Validator** | Assesses stock availability and data consistency. | Aggregation Logic |
+| **Formatter** | Compiles the final validated report into JSON/UI formats. | Pydantic Serialization |
 
 ---
 
-## 🚀 Quick Start
+## Getting Started
 
-### 1. Clone & Setup
+### 1. Installation
 
 ```bash
-git clone https://github.com/yourusername/hardware-sourcing-agent.git
-cd hardware-sourcing-agent
+# Clone the repository
+git clone https://github.com/Sujith0513/Hardware_component_search_engine.git
+cd Hardware_component_search_engine
 
-# Create virtual environment
+# Initialize virtual environment
 python -m venv venv
-venv\Scripts\activate  # Windows
-# source venv/bin/activate  # Linux/Mac
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-# Install dependencies
+# Install requirements
 pip install -r requirements.txt
 ```
 
-### 2. Configure API Keys
+### 2. Configuration
 
-```bash
-# Copy the example env file
-copy .env.example .env  # Windows
-# cp .env.example .env  # Linux/Mac
+Create a `.env` file in the root directory based on `.env.example`:
+
+```env
+TAVILY_API_KEY=your_tavily_key
+GOOGLE_API_KEY=your_gemini_key
 ```
 
-Edit `.env` and add your API keys:
-- **Tavily API Key** (free tier: 1000 searches/month): [tavily.com](https://tavily.com)
-- **Google Gemini API Key** (free tier available): [aistudio.google.com](https://aistudio.google.com/app/apikey)
+### 3. Execution Modes
 
-### 3. Run (CLI)
-
+#### CLI Interface
+Run a direct research query from the terminal:
 ```bash
 python -m src.main "ESP32-WROOM-32"
 ```
 
-### 4. Run (Streamlit Dashboard)
-
+#### Streamlit Dashboard
+Launch the interactive web interface:
 ```bash
 streamlit run app.py
 ```
 
----
-
-## 📸 Usage Examples
-
-### CLI Output
-
+#### FastAPI Backend
+Start the REST API server:
 ```bash
-$ python -m src.main "ESP32-WROOM-32"
-
-============================================================
-  Hardware Sourcing & Specs Agent
-  Component: ESP32-WROOM-32
-============================================================
-
-  Component:    ESP32-WROOM-32
-  Manufacturer: Espressif Systems
-  Description:  Wi-Fi & Bluetooth MCU module based on ESP32 chip
-  Datasheet:    https://www.espressif.com/.../esp32-wroom-32_datasheet_en.pdf
-  Package:      SMD Module (18x25.5mm)
-  Voltage:      2.2V - 3.6V
-
-  --- Key Pins (5) ---
-    Pin    2 | VCC          | Power Supply 3.3V
-    Pin    1 | GND          | Ground
-    Pin   25 | GPIO0        | General Purpose I/O / Boot Mode
-    Pin   35 | TX0          | UART0 Transmit
-    Pin   34 | RX0          | UART0 Receive
-
-  --- Pricing ---
-  Average:    $3.12
-  Range:      $2.80 - $3.45
-  Best Deal:  Mouser @ $2.80 (MOQ: 1)
-
-  Distributor               Price     MOQ      Stock
-  -------------------------------------------------------
-  Mouser Electronics        $  2.80      1     14,523
-  DigiKey                   $  3.10      1      8,920
-  Newark / Farnell          $  3.45      1      3,210
-
-  Stock: IN STOCK (Total: 26,653 units)
+python api.py
 ```
-
-### Streamlit Dashboard
-
-The dashboard provides:
-- Real-time agent progress tracking
-- Interactive component info card
-- Pricing comparison bar chart
-- Pin summary table
-- Agent reasoning trace timeline
-- Raw JSON output
 
 ---
 
-## 📁 Project Structure
+## API Reference
 
-```
-├── README.md                      # This file
-├── requirements.txt               # Python dependencies
-├── .env.example                   # API key template
-├── .gitignore                     # Git ignore rules
-├── app.py                         # Streamlit dashboard
-│
+The system provides a FastAPI backend (running on port 8000 by default) for integration with other services.
+
+*   **GET `/`**: Serves the static web interface.
+*   **POST `/api/start_research`**: Initializes a research job.
+*   **GET `/api/stream?q={query}`**: Server-Sent Events (SSE) endpoint that streams the agent's real-time reasoning trace.
+*   **GET `/api/report?q={query}`**: Retrieves the final structured JSON report for a completed search.
+
+---
+
+## Project Structure
+
+```text
+├── api.py                    # FastAPI server and SSE logic
+├── app.py                    # Streamlit interactive dashboard
+├── requirements.txt          # Project dependencies
+├── .env.example              # Environment variable template
 ├── src/
-│   ├── __init__.py
-│   ├── main.py                    # CLI entry point
-│   ├── agent.py                   # LangGraph StateGraph (core)
-│   ├── state.py                   # Pydantic models & state schema
+│   ├── main.py               # CLI entry point
+│   ├── agent.py              # LangGraph orchestration logic
+│   ├── state.py              # Pydantic schema and state definitions
 │   ├── tools/
-│   │   ├── tavily_search.py       # Tavily web search tool
-│   │   ├── datasheet_extractor.py # LLM-powered extraction
-│   │   ├── pricing_lookup.py      # Distributor pricing (mock)
-│   │   └── stock_validator.py     # Stock availability check
-│   ├── data/
-│   │   └── mock_pricing.json      # Pricing database (20+ components)
-│   └── utils/
-│       ├── logger.py              # Loguru configuration
-│       └── cache.py               # In-memory TTL cache
-│
-└── tests/
-    ├── test_models.py             # Pydantic model tests
-    └── test_agent.py              # Integration & e2e tests
+│   │   ├── tavily_search.py  # Web research integration
+│   │   ├── datasheet_extractor.py # LLM extraction and validation
+│   │   ├── pricing_lookup.py # Inventory and pricing lookup
+│   │   └── stock_validator.py # Stock availability analysis
+│   ├── utils/
+│   │   ├── logger.py         # Loguru configuration
+│   │   └── cache.py          # TTL-based data caching
+│   └── data/
+│       └── mock_pricing.json # Component database for demonstration
+├── static/                   # Frontend assets for the FastAPI interface
+└── tests/                    # Unit and integration test suites
 ```
 
 ---
 
-## 🛠️ Tech Stack
+## Technology Stack
 
-| Layer | Technology | Purpose |
-|-------|-----------|---------|
-| **Orchestration** | LangGraph `StateGraph` | Stateful agent graph with conditional edges |
-| **LLM** | Google Gemini 2.0 Flash | Structured data extraction (free tier) |
-| **Search** | Tavily API | AI-optimized web search |
-| **Validation** | Pydantic v2 | Strict data contracts at all boundaries |
-| **UI** | Streamlit | Interactive dashboard with real-time updates |
-| **HTTP** | Requests + BeautifulSoup | HTTP client + HTML parsing |
-| **Logging** | Loguru | Colored console + rotating file logs |
-| **Config** | python-dotenv | Environment variable management |
+| Layer | Technology |
+| :--- | :--- |
+| **Orchestration** | LangGraph StateGraph |
+| **LLMs** | Google Gemini 2.0 Flash & Gemini 1.5 Flash |
+| **API Framework** | FastAPI |
+| **UI Framework** | Streamlit |
+| **Search Engine** | Tavily Search API |
+| **Data Validation** | Pydantic v2 |
+| **Logging** | Loguru |
 
 ---
 
-## 🧪 Testing
+## Development and Testing
+
+The project utilizes `pytest` for quality assurance.
 
 ```bash
-# Run all tests
-pytest tests/ -v
+# Run the complete test suite
+pytest tests/
 
-# Run model tests only
-pytest tests/test_models.py -v
-
-# Run integration tests (requires API keys)
-pytest tests/test_agent.py -v
+# Run specific integration tests
+pytest tests/test_agent.py
 ```
 
 ---
 
-## ⚠️ Limitations & Future Work
+## Future Roadmap
 
-### Current Limitations
-1. **Mock Pricing Data**: Uses a JSON file instead of real distributor APIs. Real APIs (DigiKey, Mouser) require OAuth registration that takes several days to approve.
-2. **Single Component**: Processes one component at a time (no batch/comparison mode).
-3. **LLM Dependency**: Datasheet extraction quality depends on the LLM's knowledge of the component.
-
-### Future Improvements
-1. **Real Distributor APIs**: Integrate DigiKey and Mouser APIs for live pricing
-2. **Component Comparison**: Side-by-side comparison of 2-3 alternative components
-3. **PDF Parsing**: Download and parse actual datasheet PDFs for pin diagrams
-4. **Conversation Mode**: Follow-up questions about component compatibility
-5. **Export**: CSV/Excel export for procurement teams
-6. **Memory**: Persistent session history using LangGraph checkpointing
+1.  **Direct Distributor API Integration**: Transition from demonstration data to live Mouser/DigiKey API integrations.
+2.  **Comparative Analysis**: Enable side-by-side technical comparison of multiple part numbers.
+3.  **Advanced PDF Parsing**: Direct extraction of pinout diagrams and graphs from binary PDF files.
+4.  **Persistent Storage**: Integration of Vector Databases for long-term component specification storage.
 
 ---
 
-## 🏆 Bonus Technologies Used
+## License
 
-- ✅ **LangGraph** — Full `StateGraph` with conditional edges and retry cycles
-- ✅ **Pydantic v2** — Strict validation models at every data boundary
-- ✅ **Built with Antigravity** — AI-assisted development
+This project is submitted as a technical assessment for the Lumiq.ai internship.
 
 ---
 
-## 📄 License
-
-This project was built as a submission for the Lumiq.ai internship assignment.
-
----
-
-*Built with ❤️ using LangGraph, Pydantic, and Streamlit*
-#   H a r d w a r e _ c o m p o n e n t _ s e a r c h _ e n g i n e  
- 
+*Built using LangGraph, Pydantic, and Streamlit*
